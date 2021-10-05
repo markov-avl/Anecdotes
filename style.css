@@ -1,0 +1,146 @@
+.main {
+    padding: 20px;
+    min-height: 200vh;
+    font-size: 20px;
+    margin-top: 38px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 10px #3c3f41;
+}
+
+body {
+    background: #1d1d1d;
+    color: #ffffff;
+}
+br {
+    display: block;
+    margin: 10px 0;
+    content: " ";
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.anecdote {
+    margin-bottom: 30px;
+}
+
+.announcement {
+    justify-items: center;
+    align-items: center;
+    border: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+}
+.announcement > * {
+    background-color: transparent;
+    padding: 10px;
+}
+.announcement > div > p {
+    text-align: justify;
+}
+.announcement > div > img {
+    width: 20px;
+    height: 100px;
+}
+
+.content, .rate  {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ca6048;
+    z-index: 10;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.nav__li {
+    width: 100%;
+    list-style: none;
+    height: 38px;
+}
+.nav__li a:hover {
+    background-color: #ED4726;
+}
+.easy {
+    background-color: #C73C20;
+}
+.medium {
+    background-color: #A1301A;
+}
+.hard {
+    background-color: #611D10;
+}
+
+.nav__li a {
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+}
+.nav__li a.active {
+    background-color: #ddd;
+}
+
+.submenu, .right, .left {
+    display: none;
+    outline: #1d1d1d outset 1px;
+}
+.nav__li:hover > .submenu {
+    display: block;
+    list-style: none;
+    position: relative;
+}
+.nav__li:hover > .right {
+    display: block;
+    top: -38px;
+    left: 100%;
+    position: relative;
+    list-style: none;
+}
+.nav__li:hover > .left {
+    display: block;
+    top: -38px;
+    right: 100%;
+    position: relative;
+    list-style: none;
+}
+
+@media screen and (max-width: 718px) {
+    .nav__itemName {
+        display: none;
+    }
+    .nav__li a svg {
+        margin-right: 0;
+    }
+}
+
+.rate > * {
+    padding: 10px;
+    display: flex;
+}
+.dislike {
+    float: left;
+}
+.like {
+    float: right;
+}
